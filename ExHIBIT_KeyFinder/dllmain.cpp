@@ -4,11 +4,6 @@
 #include <Shlwapi.h>
 #pragma comment(lib, "shlwapi.lib")
 
-VOID  __declspec(dllexport) WINAPI MyFunc()
-{
-
-}
-
 FILE* streamconsole;
 BOOL consoleState = FALSE;
 BOOL processKeyState = FALSE;
@@ -18,6 +13,12 @@ DWORD dstCallAddr;
 
 typedef HMODULE(WINAPI* pLoadLibraryExA)(LPCSTR lpLibFileName, HANDLE hFile, DWORD dwFlags);
 pLoadLibraryExA orgLoadLibraryExA = LoadLibraryExA;
+
+
+VOID  __declspec(dllexport) WINAPI MyFunc()
+{
+
+}
 
 DWORD MemSearch(DWORD beginAddr, VOID* searchCode, INT lenOfCode, BOOL clockWise)
 {
@@ -65,11 +66,10 @@ VOID SetConsole()
 
 }
 
-VOID ProcessKey(LPSTR fullPath, DWORD keyFileAddr,DWORD key)
+VOID ProcessKey(DWORD keyFileAddr,DWORD key)
 {
 	SetConsole();
 	keyFileAddr += 0x8;
-	std::string rldName = fullPath;
 	if (!processKeyState)
 	{
 		std::cout << "def.rld: " << "0x" << std::hex << key << std::endl;
@@ -113,7 +113,6 @@ VOID __declspec(naked) GetKey()
 {
 	DWORD key;
 	DWORD keyFileAddr;
-	LPSTR fullPath;
 	__asm
 	{
 		pushad
@@ -121,10 +120,8 @@ VOID __declspec(naked) GetKey()
 		mov eax,[esp+0x30]
 		mov key,eax
 		mov keyFileAddr,ecx
-		mov eax,[esp+0x38]
-		mov fullPath,eax
 	}
-	ProcessKey(fullPath, keyFileAddr, key);
+	ProcessKey(keyFileAddr, key);
 	__asm
 	{
 		popfd
