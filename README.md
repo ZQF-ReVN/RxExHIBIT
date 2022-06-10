@@ -1,12 +1,14 @@
 # ExHIBIT_KeyFinder
 This is a beta version. There may be an error
 # Usage
-Compile and Copy  
+1.Compile and Copy  
 **ExHIBIT_KeyFinder.dll**，**ExHIBIT_KeyFinder_Loader.exe**  
 to the game directory  
-Drag game exe file to **ExHIBIT_KeyFinder_Loader.exe**  
+
+2.Drag game exe file to **ExHIBIT_KeyFinder_Loader.exe**  
 Wait a while，You will get two keys（console）and two key files（game directory）  
-You can use the tools for this project to extract it   
+
+3.You can use the tools from this project to extract it   
 https://github.com/Yggdrasill-Moe/Niflheim/tree/master/ExHIBIT
 
 # Tested Games
