@@ -2,8 +2,7 @@
 This is a beta version. There may be an error
 # Usage
 1.Compile and Copy  
-**ExHIBIT_KeyFinder.dll**，**ExHIBIT_KeyFinder_Loader.exe**  
-to the game directory  
+**ExHIBIT_KeyFinder.dll**，**ExHIBIT_KeyFinder_Loader.exe**  to the game directory  
 
 2.Drag game exe file to **ExHIBIT_KeyFinder_Loader.exe**  
 Wait a while，You will get two keys（console）and two key files（game directory）  
