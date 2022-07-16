@@ -27,7 +27,7 @@ DWORD MemSearch(DWORD beginAddr, VOID* searchCode, INT lenOfCode, BOOL clockWise
 		if (beginAddr < 0x7FFF0000 && beginAddr > 0x00010000)
 		{
 			DWORD oldProtect = 0;
-			VirtualProtect((LPVOID)beginAddr, lenOfCode, PAGE_EXECUTE_READWRITE, &oldProtect);
+			//VirtualProtect((LPVOID)beginAddr, lenOfCode, PAGE_EXECUTE_READWRITE, &oldProtect);
 			if (!memcmp(searchCode, (void*)beginAddr, lenOfCode))
 			{
 				return beginAddr;
