@@ -13,30 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Detours">
-      <UniqueIdentifier>{05182fb7-8677-4571-97f1-8809d5674d5f}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExHIBIT_KeyFinder_Loader.cpp">
+    <ClCompile Include="ExHIBIT_Loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Detours\disasm.cpp">
-      <Filter>Detours</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Detours\modules.cpp">
-      <Filter>Detours</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Detours\creatwth.cpp">
-      <Filter>Detours</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Detours\detours.cpp">
-      <Filter>Detours</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\Detours\detours.h">
-      <Filter>Detours</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

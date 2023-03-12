@@ -1,12 +1,17 @@
 #include <Windows.h>
 #include <iostream>
-#include <detours.h>
 
-STARTUPINFOA si;
-PROCESS_INFORMATION pi;
+#include "../../ThirdParty/detours/include/detours.h"
+
+#pragma comment(lib,"../../ThirdParty/detours/lib.X86/detours.lib")
+
 
 int main(int argc, char* argv[])
 {
+    STARTUPINFOA si = { 0 };
+    PROCESS_INFORMATION pi = { 0 };
+    si.cb = sizeof(si);
+
     std::string nameEXE;
     if (argc > 1)
     {
