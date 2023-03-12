@@ -96,16 +96,15 @@ DWORD FindDecodeScript(HMODULE hmImageBase)
 	//Find Push offset"loadRld"
 	BYTE toFindPushStr[] = { 0x68,0x00,0x00,0x00,0x00 };
 	memcpy(toFindPushStr + 1, &find, 4);
-	find = MemSearch(find, 0x4000000, toFindPushStr, sizeof(toFindPushStr), TRUE);
+	find = MemSearch(find + 0, 0x4000000, toFindPushStr, sizeof(toFindPushStr), TRUE);
 
 	//Find Call Decode Function
 	BYTE toFindCall[] = { 0xE8 };
-	find = MemSearch(find, 0x4000000, toFindCall, sizeof(toFindCall), TRUE);
+	find = MemSearch(find + 0, 0x4000000, toFindCall, sizeof(toFindCall), TRUE);
 	find = MemSearch(find - 1, 0x4000000, toFindCall, sizeof(toFindCall), TRUE);
 
 	//Get Function Addr
-	DWORD rawAddr = *(PDWORD)(find + 1);
-	pFunc = rawAddr + find + 5;
+	pFunc = *(PDWORD)(find + 1) + find + 5;
 
 	return pFunc;
 }
