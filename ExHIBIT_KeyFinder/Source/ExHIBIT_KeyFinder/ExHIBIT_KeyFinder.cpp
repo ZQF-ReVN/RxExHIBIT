@@ -46,7 +46,7 @@ VOID __fastcall NewDecodeScript(PDWORD pThis, DWORD dwEDX, DWORD isDecode, PDWOR
 		}
 		else
 		{
-			WriteConsoleW(g_hSTD_OUT, L"Create key_def.bin Failde!!", 27, NULL, NULL);
+			WriteConsoleW(g_hSTD_OUT, L"Create key_def.bin Failed!!", 27, NULL, NULL);
 		}
 	}
 	break;
@@ -66,7 +66,7 @@ VOID __fastcall NewDecodeScript(PDWORD pThis, DWORD dwEDX, DWORD isDecode, PDWOR
 		}
 		else
 		{
-			WriteConsoleW(g_hSTD_OUT, L"Create key.bin Failde!!\n", 24, NULL, NULL);
+			WriteConsoleW(g_hSTD_OUT, L"Create key.bin Failed!!\n", 24, NULL, NULL);
 		}
 	}
 	break;
