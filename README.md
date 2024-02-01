@@ -1,16 +1,15 @@
 # ExHIBIT_KeyFinder
-This is a beta version. There may be an error
-# Usage
-1.Compile and Copy  
-**ExHIBIT_KeyFinder.dll**，**ExHIBIT_KeyFinder_Loader.exe**  to the game directory  
+Automatically find key and key table
 
-2.Drag game exe file to **ExHIBIT_KeyFinder_Loader.exe**  
-Wait a while，You will get two keys（console）and two key files（game directory）  
+## Usage
+- compile and copy **KeyFinder.dll** and **Loader.exe** to game directory  
+- use cmd run **Loader.exe**，follow prompts to enter correct commands  
+- wait a while，you will get two keys (.bin) and two key files(.bin) in game directory  
 
-3.You can use the tools from this project to extract it   
+You can use tools from this project to decrypt `.rld` files  
 https://github.com/Yggdrasill-Moe/Niflheim/tree/master/ExHIBIT
 
-# Tested Games
+## Tested Games
 仄暗き時の果てより  
 家の彼女  
 夏の色のノスタルジア  
